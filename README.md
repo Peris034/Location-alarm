@@ -1,4 +1,4 @@
-# Mern-Stack-Crud-App
+# Location-alarm
 
 This is a simple crud project for beginners built with the following technologies:
 - [React](https://facebook.github.io/react/) and [React Router](https://reacttraining.com/react-router/) for the frontend
