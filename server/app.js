@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use(session({
-    secret: 'a5edd915fd538361f92f6a230a515d9fa83cec755188e988c1569adf222b03b9',
+    secret: 'secret_key',
     resave: true,
     saveUninitialized: true,
     store: MongoStore.create({
