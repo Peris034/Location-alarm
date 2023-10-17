@@ -7,14 +7,14 @@ function LocationInput() {
   const [userLocation, setUserLocation] = useState(null);
   const [suggestionClicked, setSuggestionClicked] = useState(false);
   const [Localarea, setLocalarea] = useState([]);
-  const apiKey = 'AIzaSyCee90Fb3gKWO7QkPcuoF1h7yxVd-vaZbA';
+  const apiKey = 'Your_api_key';
 
   const getUserLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const { latitude, longitude } = position.coords;
-          const key = 'AIzaSyCee90Fb3gKWO7QkPcuoF1h7yxVd-vaZbA';
+          const key = 'Your_api_key';
           fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${key}`)
             .then(response => response.json())
             .then(data => {
@@ -51,7 +51,7 @@ function LocationInput() {
 
 
   useEffect(() => {
-    fetch('https://ipinfo.io/json?token=f7d01cbab68e00')
+    fetch('https://ipinfo.io/json?token=Your_token')
       .then(response => response.json())
       .then(data => {
         setUserLocation({
@@ -61,23 +61,6 @@ function LocationInput() {
       })
       .catch(error => console.error('Error fetching location:', error));
   }, []);
-
-  // const handleInputChange = async (e) => {
-  //   const value = e.target.value;
-  //   setInputValue(value);
-  //   setSuggestionClicked(false);
-
-  //   const apiUrl = `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${value}&key=${apiKey}&callback=handleAutocompleteResponse`;
-
-  //   const script = document.createElement('script');
-  //   script.src = apiUrl;
-  //   document.body.appendChild(script);
-
-  //   window.handleAutocompleteResponse = function(data) {
-  //     setSuggestions(data.predictions);
-  //     document.body.removeChild(script);
-  //   };
-  // };
 
   const handleInputChange = (e) => {
     const value = e.target.value;
@@ -112,28 +95,6 @@ function LocationInput() {
 
   const handleSetAlarm = () => {
     getUserLocation();
-    if (inputValue === 'Changa, Gujarat, India') {
-      alert(`You've reached your destination: Changa, Gujarat, India`);
-      const audio = new Audio('/sounds/Alarm.mp3');
-      let playCount = 0;
-      const playAudio = () => {
-        audio.play();
-        audio.onended = () => {
-          playCount++;
-          if (playCount < 3) {
-            playAudio();
-          }
-        };
-      };
-      playAudio();
-    }
-    if (inputValue === 'Ahmedabad, Gujarat, India') {
-      alert(`You're 70.4 km away from destination : Ahmedabad, Gujarat, India`);
-    }
-    if (inputValue === 'Surat, Gujarat, India') {
-      alert(`You're 225.1 km away from destination : Surat, Gujarat, India`);
-    }
-
     if (userLocation) {
       if (inputValue.trim() === '') {
         alert('Please enter a location.');
@@ -143,7 +104,7 @@ function LocationInput() {
       const destination = suggestions.find(suggestion => suggestion.description === inputValue);
 
       if (!destination) {
-        // alert('Invalid location. Please choose from suggestions.');
+        alert('Invalid location. Please choose from suggestions.');
         return;
       }
 
@@ -231,107 +192,3 @@ function LocationInput() {
 }
 
 export default LocationInput;
-
-// import React, { useState } from 'react';
-// import './LocationInput.css';
-
-// function LocationInput() {
-//   const [inputValue, setInputValue] = useState('');
-//   const [suggestions, setSuggestions] = useState([]);
-//   const [userLocation, setUserLocation] = useState(null);
-//   const getUserLocation = () => {
-//     if (navigator.geolocation) {
-//       navigator.geolocation.getCurrentPosition(
-//         (position) => {
-//           setUserLocation({
-//             latitude: position.coords.latitude,
-//             longitude: position.coords.longitude,
-//           });
-//         },
-//         (error) => {
-//           console.error('Error getting user location:', error);
-//         }
-//       );
-//     } else {
-//       alert('Geolocation is not supported by this browser.');
-//     }
-//   };
-//   const handleInputChange = (e) => {
-//     const value = e.target.value;
-//     setInputValue(value);
-//     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-//     const apiUrl = `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${value}&key=AIzaSyBwHlGLa4bIBACO6qWFQaCeT16Qcd2oBRU`;
-
-//     // fetch(proxyUrl + apiUrl, {
-//     //   method: "GET",
-//     //   headers: {
-//     //     "origin": "http://localhost:3000", // Add the origin header
-//     //     "x-requested-with": "XMLHttpRequest"
-//     //   },
-//     // })
-//     fetch(proxyUrl + apiUrl, {
-//       "cache": "default",
-//       "headers": {
-//         "x-requested-with": "XMLHttpRequest"
-//       },
-//       "method": "GET",
-//       "referrer": "http://localhost:3000/",
-//     })
-//       .then(response => response.json())
-//       .then(data => {
-//         setSuggestions(data.predictions.slice(0, 5)); // Limit to 5 suggestions
-//       })
-//       .catch(error => console.error('Error fetching suggestions:', error));
-//   };
-
-//   fetch('https://ipinfo.io/json')
-//     .then(response => response.json())
-//     .then(data => {
-//       console.log(data);
-//     })
-//     .catch(error => console.error('Error fetching location:', error));
-
-
-//     const handleSetAlarm = () => {
-//       if (userLocation) {
-//         // Compare userLocation with entered location (inputValue)
-//         // Logic for setting the alarm
-//         alert('Alarm set!');
-//       } else {
-//         alert('Please allow location access to proceed.');
-//       }
-//     };
-
-//   const handleSuggestionClick = (suggestion) => {
-//     setInputValue(suggestion.description);
-//     setSuggestions([]);
-//   };
-
-//   return (
-//     <div className="locationInputContainer">
-//       <h2>Enter Location</h2>
-//       <input
-//         type="text"
-//         placeholder="Type location here"
-//         value={inputValue}
-//         onChange={handleInputChange}
-//       />
-//       {suggestions.length > 0 && (
-//         <ul className="suggestionList">
-//           {suggestions.map((suggestion, index) => (
-//             <li
-//               key={index}
-//               onClick={() => handleSuggestionClick(suggestion)}
-//             >
-//               {suggestion.description}
-//             </li>
-//           ))}
-//         </ul>
-//       )}
-//       <button onClick={getUserLocation}>Get My Location</button>
-//       <button onClick={handleSetAlarm}>Set Alarm</button>
-//     </div>
-//   );
-// }
-
-// export default LocationInput;
