@@ -23,7 +23,7 @@ npm start
 
 - Frontend
 ```shell
-cd client && npm start
+cd client && node app.js
 ```
 
 ## Contributions
