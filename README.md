@@ -18,12 +18,12 @@ npm install
 
 - Backend
 ```shell
-npm start
+cd server && node app.js
 ```
 
 - Frontend
 ```shell
-cd client && node app.js
+cd client && npm start
 ```
 
 ## Contributions
