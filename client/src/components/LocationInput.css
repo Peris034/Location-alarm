@@ -1,0 +1,84 @@
+.al {
+  /* background-color: #bbd740e0; */
+  padding-top: 55px;
+  padding-bottom: 74px;
+}
+video {
+  position: fixed; /* Set to fixed position */
+  top: 0;
+  left: 0;
+  width: 100vw; /* 100% of viewport width */
+  height: 100vh; /* 100% of viewport height */
+  z-index: -1;
+  background: #0b1c3400;
+  object-fit: cover;
+}
+
+.locationInputContainer {
+  font-family: Arial, sans-serif;
+  background-color: #c11ce6f0;
+  padding: 40px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 45px;
+  margin-top: 45px;
+  border-radius: 10px;
+  /* font-family: Arial, sans-serif;
+  text-align: center;
+  justify-content: center; 
+  max-width: 300px;
+  margin: center;
+  margin-top: 60px;
+  padding-top: 25px;
+  border: 1px solid #ccc; */
+}
+.block {
+  margin-bottom: 20px;
+  /* Add margin between blocks */
+}
+
+.block h2{
+  margin-bottom: 30px;
+  /* Add margin between blocks */
+}
+
+.block input {
+  width: 100%;
+  padding: 8px;
+  background-color: #da930edf;
+  margin-bottom: 10px;
+}
+
+.suggestionList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f900;
+}
+
+.suggestionList li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestionList li:hover {
+  background-color: #afd02bb0;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

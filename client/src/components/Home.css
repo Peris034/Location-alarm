@@ -1,0 +1,15 @@
+.homeContainer {
+    /* background-color: #f0f0f000; */
+    /* padding: 20px; */
+    text-align: center;
+    min-height: 100%;
+    position: relative;
+    margin-top: 20px;
+    /* margin-bottom: 100px; */
+    padding-top: 25px;
+  }
+  html, body {
+    background-color: #f0f0f000;
+    height: 100%;
+    margin: 0;
+  }

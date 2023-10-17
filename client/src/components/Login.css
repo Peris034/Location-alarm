@@ -1,0 +1,22 @@
+.loginContainer {
+  background-color: rgba(248, 248, 248, 0.9); /* 90% transparent white */
+  padding: 140px;
+  text-align: center;
+  padding-top: 175px;
+  border: 1px solid rgba(0, 0, 0, 0.1); /* 10% transparent black border */
+}
+
+.loginContainer input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1); /* 10% transparent black border */
+}
+
+.loginContainer button {
+  padding: 10px 20px;
+  background-color: rgba(0, 123, 255, 0.9); /* 90% transparent blue */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}

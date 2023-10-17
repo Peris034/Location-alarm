@@ -1,0 +1,15 @@
+.alarmContainer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    padding-top: 25px;
+  }
+  
+  .alarmContainer button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  

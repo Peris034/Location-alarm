@@ -1,0 +1,32 @@
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center; /* Center the content */
+  position: fixed; /* Set position to fixed */
+  width: 100%; /* Take up full width of the viewport */
+  top: 0; /* Stick to the top */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Add some space below the header to prevent content from being obscured */
+.bodyPadding {
+  padding-top: 70px; /* Adjust as needed based on your header's height */
+}
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block; /* Align links horizontally */
+}
+
+.navLink {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px; /* Add some space between links */
+}
+
+.navLink:hover {
+  text-decoration: underline;
+}

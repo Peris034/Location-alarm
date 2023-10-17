@@ -1,0 +1,154 @@
+/* profile.css */
+.content-box {
+  background-color: #e3fa186c;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  width: 200px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.profile {
+  background-color: #a0c171;
+  text-align: -webkit-center;
+  padding-top: 25px;
+  height: 100vh; /* Adjusted height */
+}
+
+.main-user-img img {
+  border: 2px solid white;
+  border-radius: 160px;
+  height: 116px;
+  margin-top: 100px;
+}
+
+.main-user-img p {
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.main-file p {
+  color: white;
+  margin: 0px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.main-file {
+  margin-top: 20px;
+  text-align: -webkit-center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.main-file label {
+  min-width: 120px; /* Adjust as needed */
+  margin-right: 10px;
+  text-align: right;
+}
+
+.main-file span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.main-file h3 {
+  border: 0px solid white;
+  width: 155px;
+  color: aliceblue;
+  font-size: 18px;
+  padding: 20px;
+}
+
+.use-file {
+  position: absolute;
+  top: 0; /* Adjusted top position */
+  left: 50%;
+  transform: translate(-50%, 0);
+  justify-content: center;
+  align-items: -webkit-center;
+}
+
+.main-user,
+.main-email {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: start;
+  row-gap: 5px;
+  column-gap: 20px;
+}
+
+.webprofile {
+  margin-top: 20px;
+}
+
+/* .profile {
+    background-color: #242424;
+    text-align: -webkit-center;
+    height: 127vh; 
+  }
+  
+  .main-user-img img {
+    border: 2px solid white;
+    border-radius: 160px;
+    /* padding: 100px; */
+    /* margin-top: 0px;
+    height: 96px;
+  }
+  
+  .main-user-img p {
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 0px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  
+  .main-file p {
+    color: white;
+    margin: 0px;
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  
+  .main-file {
+    margin-top: 20px;
+    text-align: -webkit-center;
+  }
+  
+  .main-file h3 {
+    border: 1px solid white;
+    width: 200px;
+    color: aliceblue;
+    font-size: 16px;
+    padding: 20px;
+  }
+  
+  .use-file {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: -webkit-center;
+  }
+  
+  .main-user,
+  .main-email {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: start;
+    row-gap: 5px;
+    column-gap: 20px;
+  }
+  
+  .webprofile {
+    margin-top: 20px;
+  }  */
